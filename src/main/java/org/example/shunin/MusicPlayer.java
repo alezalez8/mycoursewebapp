@@ -1,9 +1,13 @@
 package org.example.shunin;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MusicPlayer {
-    private Music music;
+  //  private Music music;
     private int volume;
     private String name;
+    private List<Music> musicList = new ArrayList<>();
 
     public int getVolume() {
         return volume;
@@ -22,20 +26,32 @@ public class MusicPlayer {
     }
 
     // IoC
-    public MusicPlayer(Music music) {
-        this.music = music;
+    public MusicPlayer(List<Music> musicList) {
+        this.musicList = musicList;
     }
 
     public MusicPlayer() {
-
     }
 
-    public void setMusic(Music music) {
-        this.music = music;
+
+    public void setMusicList(List<Music> musicList) {
+        this.musicList = musicList;
     }
+
+
 
     public void playMusic() {
-        System.out.println("Playing: " + music.getSong());
+        for (Music music: musicList
+             ) {
+            System.out.println(music.getSong());
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+//        System.out.println("Playing: " + music.getSong());
     }
+
 
 }
