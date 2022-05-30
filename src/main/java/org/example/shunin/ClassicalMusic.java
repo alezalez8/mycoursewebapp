@@ -10,7 +10,7 @@ import javax.annotation.PreDestroy;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component()
+//@Component()
 public class ClassicalMusic implements Music{
 
 /*
@@ -25,18 +25,6 @@ public class ClassicalMusic implements Music{
 
     }
 
-/*
-    public int getVolume() {
-        return volume;
-    }
-*/
-
-/*
-    public String getName() {
-        return name;
-    }
-*/
-
     @Override
     public List<String > getSong() {
         List<String> listOfSong = new ArrayList<>();
@@ -47,7 +35,7 @@ public class ClassicalMusic implements Music{
         return listOfSong;
 
     }
-    @PostConstruct
+ //   @PostConstruct
     public void doMyInit() {
         System.out.println("Doing my init");
     }
@@ -56,7 +44,7 @@ public class ClassicalMusic implements Music{
         return new ClassicalMusic();
     }
 
-    @PreDestroy
+  //  @PreDestroy
     public void doMyDestroy() {
         System.out.println("Doing my destraction");
 

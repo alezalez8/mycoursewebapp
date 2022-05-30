@@ -58,8 +58,6 @@ public class MusicPlayer {
             currentPlay = music2.getSong().get(numberOfSong);
         }
 
-
-
        // return "Playing: " + music1.getSong() + " ,  " + music2.getSong();
         return "Playing:  " + currentPlay ;
 
