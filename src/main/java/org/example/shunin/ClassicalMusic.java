@@ -13,23 +13,29 @@ import java.util.List;
 @Component()
 public class ClassicalMusic implements Music{
 
+/*
     @Value("${musicPlayer.volume}")
     private int volume;
 
     @Value("${musicPlayer.name}")
     private String name;
+*/
 
-    private ClassicalMusic() {
+    public ClassicalMusic() {
 
     }
 
+/*
     public int getVolume() {
         return volume;
     }
+*/
 
+/*
     public String getName() {
         return name;
     }
+*/
 
     @Override
     public List<String > getSong() {
